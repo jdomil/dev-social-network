@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { Navigate } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import React from "react";
+import { Navigate } from "react-router-dom";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
 
 const PrivateRoute = ({
   component: Component,
@@ -9,7 +9,7 @@ const PrivateRoute = ({
 }) => {
   if (isAuthenticated) return <Component />;
 
-  return <Navigate to='/login' />;
+  return <Navigate to="/login" />;
 };
 
 PrivateRoute.propTypes = {
